@@ -1,118 +1,30 @@
-/* 政务网站自定义样式 蓝灰风格 */
-:root {
-  --gov-main-color: #1f5496;
-  --gov-text: #333;
-  --gov-light-text: #666;
-  --gov-border: #ccc;
-  --gov-bg: #fff;
-}
-body {
-  font-family: "Microsoft Yahei", SimSun, sans-serif;
-  background: var(--gov-bg);
-  color: var(--gov-text);
-}
-/* 导航栏 */
-#page-header {
-  background: var(--gov-main-color);
-}
-#page-header .site-title {
-  color: #fff;
-}
-#page-header .site-subtitle {
-  color: #f0f0f0;
-}
-#page-header #nav a {
-  color: #fff;
-}
-#page-header #nav a:hover {
-  color: #d0e0f5;
-}
-/* 面包屑 */
-.breadcrumb {
-  font-size: 14px;
-  color: var(--gov-light-text);
-  margin-bottom: 20px;
-}
-/* 文章标题 */
-.post-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-/* 正文 */
+/* 政务通知页面样式 */
 .post-content {
   font-size: 16px;
   line-height: 1.8;
 }
-.post-content p {
-  margin: 1em 0;
-}
-.post-content h2 {
-  font-size: 19px;
-  font-weight: bold;
-  margin-top: 28px;
-}
 /* 打印按钮 */
 .gov-print-btn {
-  text-align: right;
-  margin: 12px 0 20px 0;
+  margin: 10px 0 20px 0;
 }
 .gov-print-btn button {
-  padding: 4px 14px;
+  padding: 4px 12px;
   border: 1px solid #999;
   background: #fff;
   cursor: pointer;
-  border-radius: 2px;
 }
 .gov-print-btn button:hover {
-  background: #f5f7fa;
+  background: #f5f5f5;
 }
 /* 附件下载区块 */
 .attach-box {
-  margin-top: 35px;
+  margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid var(--gov-border);
+  border-top: 1px solid #ccc;
 }
-.attach-box a {
-  color: var(--gov-main-color);
-}
-/* 首页公告列表 */
-#recent-posts .post-item {
-  padding: 12px 0;
-  border-bottom: 1px dashed #eee;
-}
-#recent-posts .post-item .post-title {
-  font-size: 16px;
-}
-#recent-posts .post-item .post-title a {
-  color: #222;
-}
-#recent-posts .post-item .post-title a:hover {
-  color: var(--gov-main-color);
-}
-#recent-posts .post-item .post-meta {
-  font-size: 14px;
-  color: var(--gov-light-text);
-}
-/* 分页 */
-.pagination .page-number {
-  border-color: var(--gov-main-color);
-  color: var(--gov-main-color);
-}
-.pagination .current {
-  background: var(--gov-main-color);
-  color: #fff;
-}
-/* 打印样式：隐藏导航、页脚、打印按钮 */
+/* 打印时隐藏按钮 */
 @media print {
-  #page-header,
-  .gov-print-btn,
-  #footer,
-  .breadcrumb {
+  .gov-print-btn {
     display: none;
-  }
-  .post-content {
-    font-size: 15px;
   }
 }
