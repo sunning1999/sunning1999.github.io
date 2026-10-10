@@ -179,27 +179,122 @@
   isToc: false,
   pageType: 'archive'
 }</script><link rel="stylesheet" href="/css/gov-custom.styl"><style>
-  /* 首页大图文字美化 */
+  /* ========= 导航栏优化 ========= */
+  #nav .site-name {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+  }
+  #nav .menus_items .menu-item a:hover{
+    color:#003370 !important;
+  }
+  /* ========= 首页大图文字 ========= */
   .page-header .page-title{
-    font-weight:bold;
+    font-weight:600 !important;
+    max-width:90%;
+    line-height:1.4;
   }
-  .page-header::before{
-    background:rgba(0,28,64,0.45);
+  @media (max-width:768px){
+    .page-header{
+      height:400px !important;
+    }
   }
-  /* 栏目卡片美化，政务简约卡片 */
+  /* ========= 首页栏目卡片四列布局 ========= */
+  @media (min-width:768px){
+    .card-widget-list{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap:16px;
+    }
+  }
+  @media (max-width:767px){
+    .card-widget-list{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+  }
   .card-widget-item{
-    border-radius:4px;
-    border:1px solid #eee;
-    transition: all 0.2s;
+    text-align:center !important;
+    padding:20px 10px !important;
   }
-  .card-widget-item:hover{
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  .card-widget-item i{
+    font-size:2rem !important;
+    color:#003370 !important;
+    margin-bottom:8px;
   }
-  .card-widget-item .card-widget-item-name{
-    color:#1f2937;
+  /* ========= 文章卡片 ========= */
+  .article-item{
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+    border-radius:6px !important;
   }
-  .card-widget-item .card-widget-item-desc{
-    color:#4b5563;
+  .article-item:hover{
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  }
+  /* ========= 面包屑 ========= */
+  #breadcrumb{
+    font-size:0.95rem;
+    color:#444;
+  }
+  #breadcrumb a{
+    color:#003370;
+  }
+  /* ========= 返回顶部 ========= */
+  #back-to-top{
+    background-color:#003370 !important;
+  }
+  /* ========= 文章正文 ========= */
+  article#article-container p{
+    line-height:1.8;
+    font-size:1rem;
+  }
+  /* ========= 新增：移动端侧边抽屉 移除头像和统计 ========= */
+  #sidebar #sidebar-avatar{
+    display: none !important;
+  }
+  #sidebar .sidebar-data{
+    display: none !important;
+  }
+  /* ========= 新增：修复tags标签页空白 ========= */
+  .tag-cloud-list{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    padding: 20px !important;
+    gap:12px;
+  }
+  .tag-cloud-list a{
+    padding: 6px 14px !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 4px !important;
+    color:#003370 !important;
+  }
+  .tag-cloud-list a:hover{
+    background-color:#003370 !important;
+    color:#fff !important;
+  }
+  /* ========= 新增：页脚样式，去掉蓝色背景 ========= */
+  #footer{
+    background: #ffffff !important;
+    color:#333 !important;
+    border-top:1px solid #eee;
+  }
+  #footer a{
+    color:#003370 !important;
   }
 </style>
-<meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/image/404.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%B0%E9%97%BB%E9%80%9A%E5%91%8A"><i class="fa-fw fa fa-bullhorn"></i><span> 新闻通告</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%B7%A5%E4%BD%9C%E5%8A%A8%E6%80%81"><i class="fa-fw fa fa-paper-plane"></i><span> 工作动态</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6"><i class="fa-fw fa fa-file-text"></i><span> 政策文件</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于我们</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/image/background1.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/image/logo.png" alt="Logo"><span class="site-name">对外开放产学研合作联合实验室及产教融合基地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%B0%E9%97%BB%E9%80%9A%E5%91%8A"><i class="fa-fw fa fa-bullhorn"></i><span> 新闻通告</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%B7%A5%E4%BD%9C%E5%8A%A8%E6%80%81"><i class="fa-fw fa fa-paper-plane"></i><span> 工作动态</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6"><i class="fa-fw fa fa-file-text"></i><span> 政策文件</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于我们</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">十月 2026</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="archive"><div class="article-sort-title">全部文章 - 3</div><div class="article-sort"><div class="article-sort-item year">2026</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%9F%BA%E5%9C%B0%E7%BB%84%E7%BB%87%E4%BA%A7%E5%AD%A6%E7%A0%94%E9%A1%B9%E7%9B%AE%E5%AF%B9%E6%8E%A5%E4%BA%A4%E6%B5%81%E4%BC%9A/" title="基地组织产学研项目对接交流会">基地组织产学研项目对接交流会</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%AF%B9%E5%A4%96%E5%BC%80%E6%94%BE%E4%BA%A7%E5%AD%A6%E7%A0%94%E5%90%88%E4%BD%9C%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%8F%8A%E4%BA%A7%E6%95%99%E8%9E%8D%E5%90%88%E5%9F%BA%E5%9C%B0%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89/" title="对外开放产学研合作联合实验室及产教融合基地管理办法（试行）">对外开放产学研合作联合实验室及产教融合基地管理办法（试行）</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%AF%B9%E5%A4%96%E5%BC%80%E6%94%BE%E4%BA%A7%E5%AD%A6%E7%A0%94%E5%90%88%E4%BD%9C%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%8F%8A%E4%BA%A7%E6%95%99%E8%9E%8D%E5%90%88%E5%9F%BA%E5%9C%B0%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5%E8%BF%90%E8%A1%8C/" title="对外开放产学研合作联合实验室及产教融合基地正式投入运行">对外开放产学研合作联合实验室及产教融合基地正式投入运行</a></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 对外开放产学研合作联合实验室及产教融合基地</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script> function printPage(){window.print();} </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/image/404.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%B0%E9%97%BB%E9%80%9A%E5%91%8A"><i class="fa-fw fa fa-bullhorn"></i><span> 新闻通告</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%B7%A5%E4%BD%9C%E5%8A%A8%E6%80%81"><i class="fa-fw fa fa-paper-plane"></i><span> 工作动态</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6"><i class="fa-fw fa fa-file-text"></i><span> 政策文件</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于我们</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/image/background1.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/image/logo.png" alt="Logo"><span class="site-name">对外开放产学研合作联合实验室及产教融合基地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%96%B0%E9%97%BB%E9%80%9A%E5%91%8A"><i class="fa-fw fa fa-bullhorn"></i><span> 新闻通告</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%B7%A5%E4%BD%9C%E5%8A%A8%E6%80%81"><i class="fa-fw fa fa-paper-plane"></i><span> 工作动态</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6"><i class="fa-fw fa fa-file-text"></i><span> 政策文件</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> 关于我们</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">十月 2026</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="archive"><div class="article-sort-title">全部文章 - 3</div><div class="article-sort"><div class="article-sort-item year">2026</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%9F%BA%E5%9C%B0%E7%BB%84%E7%BB%87%E4%BA%A7%E5%AD%A6%E7%A0%94%E9%A1%B9%E7%9B%AE%E5%AF%B9%E6%8E%A5%E4%BA%A4%E6%B5%81%E4%BC%9A/" title="基地组织产学研项目对接交流会">基地组织产学研项目对接交流会</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%AF%B9%E5%A4%96%E5%BC%80%E6%94%BE%E4%BA%A7%E5%AD%A6%E7%A0%94%E5%90%88%E4%BD%9C%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%8F%8A%E4%BA%A7%E6%95%99%E8%9E%8D%E5%90%88%E5%9F%BA%E5%9C%B0%E7%AE%A1%E7%90%86%E5%8A%9E%E6%B3%95%EF%BC%88%E8%AF%95%E8%A1%8C%EF%BC%89/" title="对外开放产学研合作联合实验室及产教融合基地管理办法（试行）">对外开放产学研合作联合实验室及产教融合基地管理办法（试行）</a></div></div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-07T16:00:00.000Z" title="发表于 2026-10-08 00:00:00">2026-10-08</time></div><a class="article-sort-item-title" href="/2026/10/08/%E5%AF%B9%E5%A4%96%E5%BC%80%E6%94%BE%E4%BA%A7%E5%AD%A6%E7%A0%94%E5%90%88%E4%BD%9C%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%E5%8F%8A%E4%BA%A7%E6%95%99%E8%9E%8D%E5%90%88%E5%9F%BA%E5%9C%B0%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5%E8%BF%90%E8%A1%8C/" title="对外开放产学研合作联合实验室及产教融合基地正式投入运行">对外开放产学研合作联合实验室及产教融合基地正式投入运行</a></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div><div class="footer_custom_text"><p>©2026 对外开放产学研合作联合实验室及产教融合基地 版权所有</p>
+<p>ICP备案号：皖ICP备XXXXXX号&nbsp;&nbsp;公安备案：皖公网安备XXXXXXXX号</p>
+</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script> function printPage(){window.print();} </script><script>
+  document.addEventListener('DOMContentLoaded',function(){
+    let sidebarTabs = document.querySelectorAll('#sidebar .sidebar-tabs .tab');
+    sidebarTabs.forEach(item=>{
+      let text = item.innerText.trim();
+      if(text === '标签' || text === '归档' || text === '分类'){
+        item.style.display = 'none';
+      }
+    })
+    document.querySelector('.tab-tags').style.display='none';
+    document.querySelector('.tab-archives').style.display='none';
+    document.querySelector('.tab-categories').style.display='none';
+  })
+</script>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
